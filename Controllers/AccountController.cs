@@ -122,7 +122,8 @@ namespace Student8.Controllers
                     Entity contact = new Entity("contact");
                     contact["firstname"] = user.FirstName;
                     contact["lastname"] = user.LastName;
-                    contact["emailaddress1"] = user.Email; 
+                    contact["emailaddress1"] = user.Email;
+                    contact.Id = Guid.Parse(user.Id);
 
                     service.Create(contact);
 
